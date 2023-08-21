@@ -58,7 +58,7 @@ public class MoneyTransferTest {
         val dashboardPage = verificationPage.validVerify(verificationCode);
         val secondCardBalance = dashboardPage.getCardBalance(getSecondCardNumber().getCardNumber());
         val transferPage = dashboardPage.depositToFirstCard();
-        int amount = DashboardPage.formatWithoutMinusIssue(secondCardBalance);
+        int amount = DataHelper.formatWithoutMinusIssue(secondCardBalance);
         transferPage.transferMoney(amount, DataHelper.getSecondCardNumber());
         transferPage.amountMoreThanBalance();
 

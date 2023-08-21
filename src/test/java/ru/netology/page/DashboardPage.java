@@ -40,14 +40,4 @@ public class DashboardPage {
         transferButton2.click();
         return new MoneyTransferPage();
     }
-
-    public static int formatWithoutMinusIssue(int secondCardBalance) {
-        if (secondCardBalance < 0) {
-            secondCardBalance = (secondCardBalance - secondCardBalance) + 1000;
-        } else {
-            secondCardBalance = secondCardBalance + secondCardBalance;
-        }
-        return secondCardBalance;
-    }
-
 }

@@ -38,4 +38,14 @@ public class DataHelper {
         return new CardInfo("5559 0000 0000 0002");
     }
 
+    public static int formatWithoutMinusIssue(int secondCardBalance) {
+        if (secondCardBalance < 0) {
+            secondCardBalance = (secondCardBalance - secondCardBalance) + 1000;
+        } else {
+            secondCardBalance = secondCardBalance + secondCardBalance;
+        }
+        return secondCardBalance;
+    }
+
+
 }
